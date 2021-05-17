@@ -8,6 +8,7 @@ services:
         environment:
             - MONGO_CONNECTION_STRING=${MONGO_CONNECTION_STRING}
             - PORT=${PORT}
+            - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
         ports: 
             - "3000:${PORT}"
     database:
