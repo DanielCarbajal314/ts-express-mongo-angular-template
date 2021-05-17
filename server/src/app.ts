@@ -1,15 +1,11 @@
 import express from 'express';
 import { enviroment } from './bootstrap/enviroment';
+import { setPersonRoutes } from './routes/person.routes';
 
 const app = express();
+app.use(express.json());
 
-app.get( "/", ( req, res ) => {
-    res.send( "Hello world!" );
-} );
-
-app.get( "/bye", ( req, res ) => {
-    res.send( "Bye world!" );
-} );
+setPersonRoutes(app);
 
 
 app.listen( enviroment.serverPort, () => {
