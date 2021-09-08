@@ -1,0 +1,42 @@
+<form [formGroup]="formGroup" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+    <mat-form-field fxFill appearance="fill">
+        <mat-label>Tiempo en el trabajo actual</mat-label>
+        <input matInput required  formControlName="workTime">
+    </mat-form-field> 
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Salario Neto</mat-label>
+        <input matInput required  formControlName="paymentAmount">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Tiempo Restante de Deuda</mat-label>
+        <input matInput required  formControlName="debtAmount">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Monto de la Deuda</mat-label>
+        <input matInput required  formControlName="debtPaymentAmount">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Tipo Trabajo</mat-label>
+        <select matNativeControl formControlName="workType" name="tipo">
+          <option *ngFor="let option of workTypeOptions" [value]="option.type">
+            {{option.name}}
+          </option>
+        </select>
+      </mat-form-field>
+      <mat-form-field fxFill fxFlex="80" appearance="fill" *ngIf="isIndependant">
+        <mat-label>Regimen Independiente</mat-label>
+        <select matNativeControl formControlName="independantWorkRegime" name="tipo">
+          <option *ngFor="let option of independantWorkRegimeOptions" [value]="option.type">
+            {{option.name}}
+          </option>
+        </select>
+      </mat-form-field>
+      <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Tipo de Contrato Laboral</mat-label>
+        <select matNativeControl formControlName="contractType" name="tipo">
+          <option *ngFor="let option of contractTypeOptions" [value]="option.type">
+            {{option.name}}
+          </option>
+        </select>
+      </mat-form-field>
+</form>

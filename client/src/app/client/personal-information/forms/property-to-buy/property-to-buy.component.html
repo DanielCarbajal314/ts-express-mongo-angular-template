@@ -1,0 +1,27 @@
+<form [formGroup]="formGroup" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+    <mat-slide-toggle fxFill fxFlex="80" formControlName="isFirstProperty">{{propertyNewLabel}}</mat-slide-toggle>
+    <mat-form-field fxFill appearance="fill">
+        <mat-label>Precio de la Propiedad</mat-label>
+        <input matInput required  formControlName="propertyPrice">
+    </mat-form-field> 
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Monto Inicial con que Dispone</mat-label>
+        <input matInput required  formControlName="initialAmount">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Años De Financiamiento</mat-label>
+        <input matInput required  formControlName="yearsToPay">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Tiempo espera para hacer la compra</mat-label>
+        <input matInput required  formControlName="timeToBuyWait">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Tipo Propiedad</mat-label>
+        <select matNativeControl formControlName="propertyType" name="tipo">
+          <option *ngFor="let option of propertyOptions" [value]="option.type">
+            {{option.name}}
+          </option>
+        </select>
+      </mat-form-field>
+</form>

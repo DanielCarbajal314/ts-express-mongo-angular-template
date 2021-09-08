@@ -1,0 +1,19 @@
+<form [formGroup]="formGroup" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="2%">
+    <mat-slide-toggle fxFill fxFlex="80" formControlName="married">{{marriedStatus}}</mat-slide-toggle>
+    <mat-form-field fxFill appearance="fill">
+        <mat-label>DNI</mat-label>
+        <input matInput required  formControlName="dni">
+    </mat-form-field>
+    <mat-form-field fxFill appearance="fill" *ngIf="showCoupleDocumentInput">
+        <mat-label>DNI Conyugue</mat-label>
+        <input matInput formControlName="coupleDni">
+    </mat-form-field>    
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput required  formControlName="email">
+    </mat-form-field>
+    <mat-form-field fxFill fxFlex="80" appearance="fill">
+        <mat-label>Celular</mat-label>
+        <input matInput required  formControlName="phone">
+    </mat-form-field>
+</form>

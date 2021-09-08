@@ -1,0 +1,30 @@
+<mat-stepper linear #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Datos de la Propiedad</ng-template>
+        <div  fxLayout="column" fxLayoutAlign="space-around center">
+            <property-to-buy style="width: 80%;"></property-to-buy>
+            <div>
+                <button mat-button matStepperNext>Siguiente</button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Datos de los Ingresos</ng-template>
+        <div  fxLayout="column" fxLayoutAlign="space-around center">
+            <income style="width: 80%;"></income>
+            <div>
+                <button mat-button matStepperPrevious>Atrás</button>
+                <button mat-button matStepperNext>Siguiente</button>
+            </div>
+        </div>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Datos De Verificacion y Contacto</ng-template>
+        <div  fxLayout="column" fxLayoutAlign="space-around center">
+            <private-information style="width: 80%;"></private-information>
+            <div>
+                <button mat-button>Completar</button>
+            </div>
+        </div>
+    </mat-step>
+</mat-stepper>
