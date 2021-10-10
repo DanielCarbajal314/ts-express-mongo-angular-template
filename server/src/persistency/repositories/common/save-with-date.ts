@@ -9,7 +9,7 @@ export async function saveWithDate(
     ...entity,
     creationDate,
   });
-  const _id:string = saveOperation.insertedId;
+  const _id:string = saveOperation.insertedId.toString();
   return {
     _id,
     creationDate,
