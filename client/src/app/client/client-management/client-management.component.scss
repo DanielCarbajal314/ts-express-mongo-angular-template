@@ -1,0 +1,15 @@
+table {
+    width: 100%;
+  }
+  
+  tr.hoverRow:not(.example-expanded-row):hover {
+    background: whitesmoke;
+  }
+  
+  tr.hoverRow:not(.example-expanded-row):active {
+    background: #efefef;
+  }
+  
+  .hoverRow td {
+    border-bottom-width: 0;
+  }

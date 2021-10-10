@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Cliente: {{data.email}}</h1>
+<div mat-dialog-content>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+        <mat-form-field appearance="fill">
+            <mat-label>Recibo de Pago</mat-label>
+            <input matInput [formControl]="invoiceControl">
+        </mat-form-field>
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+            <mat-icon>download</mat-icon>
+          </button>
+        <button mat-button color="primary" (click)="uploadInvoice(); fileUpload.click();">Cargar</button>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-around center">  
+        <mat-form-field appearance="fill">
+            <mat-label>Reporte de Riesgos</mat-label>
+            <input matInput [formControl]="riskReportControl">
+        </mat-form-field> 
+        <button mat-button color="primary" (click)="uploadRiskReport(); fileUpload.click();">Cargar</button>
+    </div>
+</div>
+<div mat-dialog-actions>
+  <button mat-button cdkFocusInitial (click)="close()">Cerrar</button>
+</div>
+<input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>

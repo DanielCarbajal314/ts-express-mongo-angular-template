@@ -48,9 +48,11 @@ import { PersonalInformationComponent } from './client/personal-information/pers
 import { PrivateInformationComponent } from './client/personal-information/forms/private-information/private-information.component';
 import { IncomeComponent } from './client/personal-information/forms/income/income.component';
 import { PropertyToBuyComponent } from './client/personal-information/forms/property-to-buy/property-to-buy.component';
+import { ClientManagementComponent } from './client/client-management/client-management.component';
+import { ClientFilesFormComponent } from './client/client-files-form/client-files-form.component';
 
 @NgModule({
-  declarations: [AppComponent, PersonalInformationComponent, PrivateInformationComponent, IncomeComponent, PropertyToBuyComponent],
+  declarations: [AppComponent, PersonalInformationComponent, PrivateInformationComponent, IncomeComponent, PropertyToBuyComponent, ClientManagementComponent, ClientFilesFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
