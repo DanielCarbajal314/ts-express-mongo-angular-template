@@ -1,6 +1,6 @@
 <h1 mat-dialog-title>Cliente: {{data.email}}</h1>
 <div mat-dialog-content>
-    <div fxLayout="row" fxLayoutAlign="space-around center">
+    <div fxLayout="row" fxLayoutAlign="space-between">
         <mat-form-field appearance="fill">
             <mat-label>Recibo de Pago</mat-label>
             <input matInput [formControl]="invoiceControl">
@@ -10,7 +10,7 @@
           </button>
         <button mat-button color="primary" (click)="uploadInvoice(); fileUpload.click();">Cargar</button>
     </div>
-    <div fxLayout="row" fxLayoutAlign="space-around center">  
+    <div fxLayout="row" fxLayoutAlign="space-between">  
         <mat-form-field appearance="fill">
             <mat-label>Reporte de Riesgos</mat-label>
             <input matInput [formControl]="riskReportControl">
