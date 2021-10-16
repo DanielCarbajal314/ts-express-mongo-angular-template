@@ -31,5 +31,9 @@ export class PrivateInformationComponent implements OnInit {
     return this.formGroup.get('married')?.value ? 'Casado' : 'Soltero';
   }
 
+  getFormInformationPrivate(){
+    return this.formGroup.value;
+  }
+
   
 }
