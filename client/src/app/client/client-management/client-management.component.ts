@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { BaseComponent } from 'src/app/shared/components/base-component';
 import { ClientFilesFormComponent } from '../client-files-form/client-files-form.component';
+import { PersonalInformationComponent } from '../personal-information/personal-information.component';
 import { RegisteredPerson } from '../services/http/models/registered-person.model';
 import { PeopleViewmodelService } from '../services/view-models/people-viewmodel.service';
 
@@ -28,6 +29,12 @@ export class ClientManagementComponent extends BaseComponent implements OnInit {
     const dialogRef = this.dialog.open(ClientFilesFormComponent, {
       width: '50%',
       data: person
+    });
+  }
+
+  openModalClient(){
+    const dialogRef = this.dialog.open(PersonalInformationComponent, {
+      width: '80%'
     });
   }
 

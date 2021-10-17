@@ -4,7 +4,7 @@
         <div  fxLayout="column" fxLayoutAlign="space-around center">
             <property-to-buy style="width: 80%;"></property-to-buy>
             <div>
-                <button mat-button matStepperNext>Siguiente</button>
+                <button mat-button matStepperNext (click)="stepOne()">Siguiente</button>
             </div>
         </div>
     </mat-step>
@@ -14,7 +14,7 @@
             <income style="width: 80%;"></income>
             <div>
                 <button mat-button matStepperPrevious>Atrás</button>
-                <button mat-button matStepperNext>Siguiente</button>
+                <button mat-button matStepperNext (click)="stepTwo()">Siguiente</button>
             </div>
         </div>
     </mat-step>
@@ -23,7 +23,7 @@
         <div  fxLayout="column" fxLayoutAlign="space-around center">
             <private-information style="width: 80%;"></private-information>
             <div>
-                <button mat-button>Completar</button>
+                <button mat-button (click)="submitForm()">Completar</button>
             </div>
         </div>
     </mat-step>

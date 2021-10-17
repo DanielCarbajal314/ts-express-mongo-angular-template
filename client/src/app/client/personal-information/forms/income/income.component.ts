@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContractType, IndependantWorkRegime, WorkType } from '../../models/personal-information';
 
@@ -7,8 +7,7 @@ import { ContractType, IndependantWorkRegime, WorkType } from '../../models/pers
   templateUrl: './income.component.html',
   styleUrls: ['./income.component.scss']
 })
-export class IncomeComponent implements OnInit {
-
+export class IncomeComponent implements OnInit {  
   workTypeOptions = [
     { type: WorkType.Dependant, name: 'Dependiente'},
     { type: WorkType.Independant, name: 'Independiente'}
@@ -48,4 +47,9 @@ export class IncomeComponent implements OnInit {
     return this.formGroup.get('workType')?.value ==  WorkType.Independant;
   }
 
+  getFormIncome(){
+    console.log(this.formGroup.value);
+    return this.formGroup.value;
+  }
+  
 }

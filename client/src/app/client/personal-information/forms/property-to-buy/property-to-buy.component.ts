@@ -36,4 +36,8 @@ export class PropertyToBuyComponent implements OnInit {
     return this.formGroup.get('isFirstProperty')?.value ? 'Es Primera propiedad que va adquirir' : 'No es la primera propiedad';
   }
 
+  getFormProperty(){
+    return this.formGroup.value;
+  }
+
 }
